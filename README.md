@@ -6,6 +6,8 @@
 
 - 결과 화면: https://ejdehdtjr-afk.github.io/ai-handover-assignment-5/
 - 인계 문서: [ASSIGNMENT5_HANDOFF.md](./ASSIGNMENT5_HANDOFF.md)
+- 고정 검사 10개: [ASSIGNMENT5_TEST_PLAN.md](./ASSIGNMENT5_TEST_PLAN.md)
+- 구현 대조표: [CHECKLIST_IMPLEMENTATION_STATUS.md](./CHECKLIST_IMPLEMENTATION_STATUS.md)
 - 공개 화면 소스: [docs/index.html](./docs/index.html)
 
 ## 개선 기능
@@ -33,4 +35,3 @@
 - AI에게 맡긴 일: 환산 계산, 예외 처리, 검사 초안 작성
 - 내가 판단한 일: 기능 범위와 6회·30분 상한, 인계 시점 확정
 - AI 말을 안 들은 일: 새 API 추가 대신 과제 4의 검증된 환율 재사용
-
