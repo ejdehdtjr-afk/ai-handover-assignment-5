@@ -28,11 +28,16 @@ const failureModes = [
 ] as const;
 
 const checks = [
-  ['01', '정상', '초기 100 USD 계산'], ['02', '정상', '1 USD가 현재 환율과 일치'],
-  ['03', '정상', '250.50 입력 즉시 반영'], ['04', '정상', '0 USD는 0.00 KRW'],
-  ['05', '오류', '빈 입력 안내, 이전 결과 제거'], ['06', '오류', '음수 입력 안내'],
-  ['07', '오류', '정상 환율 없을 때 계산 중단'], ['08', '회귀', '장애 5종과 복구 유지'],
-  ['09', '회귀', '날짜 기록·차이·검산 유지'], ['10', '회귀', '모바일·라벨·상태 전달'],
+  ['T05-N01', '정상', '첫 화면 · 100 USD', '138,307.32 KRW'],
+  ['T05-N02', '정상', '1 USD 입력', '1,383.07 KRW'],
+  ['T05-N03', '정상', '250.50 USD 입력', '346,459.84 KRW'],
+  ['T05-N04', '정상', '0 USD 입력', '0.00 KRW'],
+  ['T05-E01', '오류', '입력값 전체 삭제', '결과 — · 입력 안내'],
+  ['T05-E02', '오류', '-1 USD 입력', '결과 — · 0 이상 안내'],
+  ['T05-E03', '오류', '정상값 없음 테스트', '결과 — · 환율 없음 안내'],
+  ['T05-R01', '회귀', '장애 5종 실행 후 복구', 'stale 보존 · fresh 복구'],
+  ['T05-R02', '회귀', '기록·비교·검산 확인', '2건 · 중복 0 · -1.19 KRW'],
+  ['T05-R03', '회귀', '375px 모바일 확인', '가로 넘침 0 · 라벨 표시'],
 ] as const;
 
 const handoff = [
@@ -135,7 +140,7 @@ export default function Home() {
 
       <section className="panel"><label>한 페이지 인계 문서 · 7개 항목</label><h2>AI B가 받은 내용</h2><div className="handoff7">{handoff.map(([title, description]) => <div key={title}><b>{title}</b><span>{description}</span></div>)}</div></section>
 
-      <section className="panel"><label>최종 검사 · 10 / 10</label><h2>정상 4 · 오류 3 · 회귀 3</h2><div className="check-grid">{checks.map(([number,type,description]) => <div className="check" key={number}><b>{number}</b><span>{type}</span><p>{description}</p><i>통과</i></div>)}</div></section>
+      <section className="panel"><label>최종 검사 · 10 / 10</label><h2>고유 ID · 입력 · 관찰 가능한 기대 결과</h2><div className="check-grid">{checks.map(([id,type,input,expected]) => <div className="check" key={id}><b>{id}</b><span>{type}</span><p><strong>입력</strong> {input}<br/><strong>기대</strong> {expected}</p><i>O</i></div>)}</div></section>
 
       <section className="panel">
         <label>카드 5 · 결과를 가리고 비교</label><h2>두 AI 작업 기록</h2>
