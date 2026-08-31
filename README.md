@@ -8,6 +8,7 @@
 - 인계 문서: [ASSIGNMENT5_HANDOFF.md](./ASSIGNMENT5_HANDOFF.md)
 - 고정 검사 10개: [ASSIGNMENT5_TEST_PLAN.md](./ASSIGNMENT5_TEST_PLAN.md)
 - 구현 대조표: [CHECKLIST_IMPLEMENTATION_STATUS.md](./CHECKLIST_IMPLEMENTATION_STATUS.md)
+- 원본 작업 증거: [ASSIGNMENT5_EVIDENCE_LOG.md](./ASSIGNMENT5_EVIDENCE_LOG.md)
 - 공개 화면 소스: [docs/index.html](./docs/index.html)
 
 ## 개선 기능
