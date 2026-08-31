@@ -1,0 +1,1 @@
+import type{Metadata}from'next';import'./globals.css';export const metadata:Metadata={title:'환율 기록실 — USD/KRW 개인 정보판',description:'현재 환율, 출처, 조회 시각, 날짜별 기록과 변화를 한 화면에서 확인합니다.'};export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="ko"><body>{children}</body></html>}
